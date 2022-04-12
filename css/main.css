@@ -1,0 +1,33 @@
+body {
+    
+  height: 100vh;
+  background-image: url("/home/noopura/Desktop/BrowserGame/images/bgimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+.h1Fontsize{
+    font-size: 22px;
+}
+.textColor{
+  color: antiquewhite;
+}
+
+.marginRowTopChild{
+  margin-top: 30px;
+}
+
+.cardDisplay{
+  position: relative;
+  height: 220px;
+  width: 165px;
+  background-color: antiquewhite;
+  display: inline-block;
+}
+p{
+  color: darkred;
+  padding: 45px;
+  font-size: 26px;
+}
