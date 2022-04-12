@@ -58,7 +58,6 @@ function shuffle(array) {
 function updateWinner(player,wins){//player is the element on UI side and wins is their number of wins
   player.textContent = wins;
 }
-
 /*
 To start the game
 */
@@ -82,7 +81,6 @@ function startGame(){
     updateWinner(play2, 0);
 }
 /**Next handle flipping of cards
-
  */
 function flipCards(){
   //When each player flips card 

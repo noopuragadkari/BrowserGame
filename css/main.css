@@ -1,9 +1,10 @@
-body {
-    
+
+body {  
   height: 100vh;
   background-image: url("/home/noopura/Desktop/BrowserGame/images/bgimage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 30px;
 }
 .selector-for-some-widget {
   box-sizing: content-box;
@@ -14,9 +15,45 @@ body {
 .textColor{
   color: antiquewhite;
 }
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
 
-.marginRowTopChild{
-  margin-top: 30px;
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 60px #ff6666, 0 0 70px #ff6666, 0 0 80px #ff6666;
+  }
+}
+
+.buttonStyle {
+	color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #669900;
+	padding: 20px;
+	border-radius: 50px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+}
+.buttonStyle:hover {
+  background-color: #68c11f;
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+
+
+.marginRowTop{
+  margin-top: 25px;
 }
 
 .cardDisplay{
