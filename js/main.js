@@ -6,7 +6,8 @@ let messageWinner = document.querySelector('#messageWin');
 let winnerGame = document.querySelector('#announceWinner');
 let play1 = document.querySelector('#player1');
 let play2 = document.querySelector('#player2');
-
+let showButton = document.querySelector('#newGame');
+showButton.style.display = 'none'; //Initially hide the new game button
 //Card values
 let cardVals = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'K', 'Q', 'A'];
 let cardSuits = ['♣', '♥', '♠', '◆'];
@@ -98,10 +99,24 @@ function flipCards(){
   //Increment current card
   currentCard++;
 
+  if(winner === 'WAR'){
+    flipCard.textContent = 'PREPARE FOR WAR';
+  } else {
+    flipCard.textContent = 'FLIP CARD';
+  }
   //Check if someone wins the entire game
   winnerOftheGame();
 }
-
+/*
+Function for new game to reset values
+*/
+function newGame(){
+  winnerGame.textContent = ''
+  flipCard.disabled = false; //enable Flip card button
+  showButton.style.display = 'none';
+  messageWinner.textContent =  '';
+  startGame();
+}
 /*
 Implement winning logic
 */
@@ -147,8 +162,8 @@ function winnerOftheGame(){
   else if(player2Wins === player1Wins){
     winnerGame.textContent = 'ITS A TIE.....'
   }
-  //Reset game
-  startGame();
+  flipCard.disabled = true; //disables flip card button
+  showButton.style.display = ' inline-block'; //show the new game button
 }
 
 /*
@@ -157,3 +172,4 @@ Call all inits and event listeners
 createCardDeck();
 startGame();
 flipCard.addEventListener('click',flipCards);
+showButton.addEventListener('click',newGame);
