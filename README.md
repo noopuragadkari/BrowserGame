@@ -11,6 +11,7 @@ Technologies Used:
 JavaScript, HTML, CSS, Bootstrap
 
 Getting Started:
+https://cardgamewar.netlify.app
 
 Next Steps:
 Develop a better UI with more added functionality
