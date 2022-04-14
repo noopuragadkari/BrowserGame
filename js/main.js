@@ -113,27 +113,29 @@ function newGame(){
   startGame();
 }
 /*
-Implement winning logic
+Implement winning logic for each round
 */
 function getWinner(p1Card,p2Card){
+  //player1Wins and player2Wins is the count each player wins
 //Get indexes of each player’s card
   let player1Index = cardVals.indexOf(p1Card.val);
 	let player2Index = cardVals.indexOf(p2Card.val);
-  warStack = 0;
+  
   //higher index player wins(indexOf)
   if(player1Index > player2Index) {
-    player1Wins += warStack + 1;
-    warStack++;
+    player1Wins += warStack + 1; //here player1 wins one additional card + warstack
+    warStack = 0;
     updateWinner(play1, player1Wins);
     return 'Player 1 wins this round';
   }
   else if(player2Index > player1Index){
-    player2Wins += warStack + 1;
-    warStack++;
+    player2Wins += warStack + 1;  //here player2 wins one additional card + warstack
+    warStack = 0;
     updateWinner(play2, player2Wins);
     return 'Player 2 wins this round';
   }
   else{
+    warStack ++;
     return 'WAR';
   }
 }
