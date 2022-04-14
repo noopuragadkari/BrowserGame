@@ -30,7 +30,6 @@ let currentCard, player1Deck, player2Deck, player1Wins, player2Wins, warStack;
             cardDeck.push(card);
         });
     });
-    console.log(cardDeck);
 }
 /*
 Randomly shuffle the deck of 52 cards....
@@ -72,12 +71,9 @@ function startGame(){
     messagePlayer2.textContent = '';
     //start game by shuffling the deck of cards
     shuffle(cardDeck);
-    console.log(cardDeck);
     //Now want to divide cards into 2 parts(each 26) for player1 and 2 by slicing array(slice())
     player1Deck = cardDeck.slice(0, cardDeck.length / 2);//To start from 0th index
     player2Deck = cardDeck.slice(cardDeck.length / 2);
-    console.log(player1Deck);
-    console.log(player2Deck);
     updateWinner(play1, 0);
     updateWinner(play2, 0);
 }
@@ -88,8 +84,6 @@ function flipCards(){
   //Get values of current card each player is holding
   let p1CurrentCard = player1Deck[currentCard];
 	let p2CurrentCard = player2Deck[currentCard];
-  console.log(p1CurrentCard);
-  console.log(p2CurrentCard);
   //check winner for the round
   let winner = getWinner(p1CurrentCard, p2CurrentCard);
   //Now show value of each cards on html
@@ -124,8 +118,6 @@ function getWinner(p1Card,p2Card){
 //Get indexes of each player’s card
   let player1Index = cardVals.indexOf(p1Card.val);
 	let player2Index = cardVals.indexOf(p2Card.val);
-  console.log(player1Index);
-  console.log(player2Index);
   warStack = 0;
   //higher index player wins(indexOf)
   if(player1Index > player2Index) {

@@ -1,5 +1,5 @@
 WAR
-War is a simple card game, typically played by two players.The deck is divided evenly among 2 players(26each).Each player reveals their top card and the player with higher card wins. If both have same cards then there is a WAR.
+War is a simple card game, typically played by two players.The deck is divided evenly among 2 players(26each).Each player reveals their top card at the same time and the player with higher card wins. If both have same cards then there is a WAR.
 
 Screenshot
 
