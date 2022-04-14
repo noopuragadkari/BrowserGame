@@ -8,6 +8,8 @@ let play1 = document.querySelector('#player1');
 let play2 = document.querySelector('#player2');
 let showButton = document.querySelector('#newGame');
 showButton.style.display = 'none'; //Initially hide the new game button
+
+
 //Card values
 let cardVals = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'K', 'Q', 'A'];
 let cardSuits = ['♣', '♥', '♠', '◆'];
@@ -61,8 +63,11 @@ function updateWinner(player,wins){//player is the element on UI side and wins i
 /*
 To start the game
 */
+//const bodyElement = document.querySelector('body');
 function startGame(){
     //At start of game everything set to 0
+    
+//bodyElement.style = 'background-image:/home/noopura/Desktop/BrowserGame/css/card-deck-css/images/backs/blue.svg';
     currentCard = 0;
     player1Wins = 0;
     player2Wins = 0;

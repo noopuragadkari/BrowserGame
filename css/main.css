@@ -2,7 +2,7 @@
 
 body {  
   height: 100vh;
-  background-image: url("/home/noopura/Desktop/BrowserGame/images/bgimage.jpg");
+  background: url('/home/noopura/Desktop/BrowserGame/images/bgimage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
