@@ -5,7 +5,7 @@ body {
   background: url('bgimage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px;
+  padding: 25px;
 }
 .selector-for-some-widget {
   box-sizing: content-box;
@@ -22,8 +22,10 @@ body {
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
-
-@-webkit-keyframes glow {
+/*
+css property changes from one set to another
+*/
+@-webkit-keyframes glow { 
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
   }
